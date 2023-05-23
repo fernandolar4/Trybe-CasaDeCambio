@@ -91,6 +91,25 @@ button:hover {
   padding: 30px 40px;
   margin-top: 100px;
   height: 583px;
+
+  scroll-behavior: smooth;
+  scrollbar-color: #242527 transparent;
+  scrollbar-width: thin;
+}
+
+#valores::-webkit-scrollbar {
+  width: 4px;
+  scrollbar-width: thin;
+}
+
+#valores::-webkit-scrollbar-track {
+  background-color: transparent;
+  margin: 15px;
+}
+
+#valores::-webkit-scrollbar-thumb {
+  background-color: #242527;
+  margin: 10px;
 }
 
 #valores h2 {
