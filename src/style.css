@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Fira Code', monospace;
+}
+
+.swal2-height-auto {
+  min-height: 100vh !important;
+}
+
+body {
+  background-image: url(img/Vector.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  padding: 60px 0;
+}
+
+main {
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 79px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+h1 span {
+  color: #96eb95;
+}
+
+p {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+input {
+  background: rgba(217, 217, 217, 0.1);
+  border-radius: 10px;
+  width: 171px;
+  height: 48px;
+  padding: 17px 20px 15px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: #898989;
+  border: none;
+  outline: none;
+}
+
+button {
+  padding: 11px 30px;
+  background: #96eb95;
+  border: 1px solid #96eb95;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+
+  color: #373737;
+  transition: ease-in-out 0.5s all;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #373737;
+  color: #96eb95;
+}
+
+#valores {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 20px;
+
+  overflow-y: auto;
+  /* display: flex; */
+  flex-grow: 1;
+  flex-direction: row;
+  padding: 30px 40px;
+  margin-top: 100px;
+  height: 583px;
+}
+
+#valores h2 {
+  display: block;
+  width: 100% !important;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 30px;
+}
+#valores-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#valores-container div {
+  background-image: url(img/coin.svg);
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  width: calc(20% - 10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px 15px 30px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+#valores-container h3 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #ffffff;
+}
+
+#valores-container p {
+  margin-bottom: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 17px;
+  color: #ffe713;
+}

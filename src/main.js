@@ -3,6 +3,7 @@ import Swal from 'sweetalert2';
 const search = document.getElementById('search');
 const input = document.getElementById('input');
 const valores = document.getElementById('valores');
+const valoresContainer = document.getElementById('valores-container');
 
 const testValues = (base) => {
   if (input.value === '') {
@@ -16,25 +17,27 @@ const testValues = (base) => {
 };
 
 const createTitle = (base) => {
-  const newH2 = document.createElement('h3');
+  const newH2 = document.createElement('h2');
   newH2.innerHTML = `Valores referentes a 1 ${base}`;
-  valores.appendChild(newH2);
+  valores.prepend(newH2);
 };
 
 const listElements = (obj) => {
   testValues(obj.base);
-  valores.innerHTML = '';
-  createTitle(obj.base);
+  valoresContainer.innerHTML = '';
+
   const objList = Object.entries(obj.rates);
   objList.forEach((objts) => {
     const newDiv = document.createElement('div');
     const newH3 = document.createElement('h3');
     const newP = document.createElement('p');
     [newH3.innerHTML, newP.innerHTML] = objts;
+    newP.innerHTML = objts[1].toFixed(2);
     newDiv.appendChild(newH3);
     newDiv.appendChild(newP);
-    valores.appendChild(newDiv);
+    valoresContainer.appendChild(newDiv);
   });
+  createTitle(obj.base);
 };
 
 search.addEventListener('click', () => {
